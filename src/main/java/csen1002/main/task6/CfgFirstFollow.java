@@ -99,7 +99,7 @@ public class CfgFirstFollow {
     private HashSet<String> getFirst(String production) {
         HashSet<String> firstSet = new HashSet<>();
         if (production.length() == 1) {
-            if (production.charAt(0) >= 'a' && production.charAt(0) <= 'z') {
+            if (Character.isLowerCase(production.charAt(0))) {
                 firstSet.add(production);
             } else {
                 firstSet.addAll(firstSets.get(production));
@@ -107,7 +107,7 @@ public class CfgFirstFollow {
         } else {
             for (int i = 0; i < production.length(); i++) {
                 char c = production.charAt(i);
-                if (c >= 'a' && c <= 'z') {
+                if (Character.isLowerCase(production.charAt(0))) {
                     firstSet.add(String.valueOf(c));
                     break;
                 } else {
