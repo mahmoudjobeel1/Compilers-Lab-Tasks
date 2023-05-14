@@ -1,0 +1,11 @@
+Space=1
+LP=2
+RP=3
+COMP=4
+LIT=5
+NUM=6
+ELSE=7
+IF=8
+ID=9
+'('=2
+')'=3
